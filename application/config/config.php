@@ -23,7 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/1_CI/busbooking';
+// $config['base_url'] = 'http://localhost/1_CI/busbooking';
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    $config['base_url'] = 'http://localhost/1_CI/busbooking';
+} else {
+    $config['base_url'] = 'https://krishnendudalui.in.net/busbooking-s1/';
+}
+
 /*
 |--------------------------------------------------------------------------
 | Index File
